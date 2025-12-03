@@ -1,24 +1,22 @@
 import React from 'react'
-import { NosExpertisesCompact } from '../Components/NosExpertises'
+import AProposDeNous from '../Components/AProposDeNous'
 import Footer from '../Components/Footer'
 import { AdvancedWaveSeparator } from '../Components/WaveVariants'
 
-function CommentCaMarche() {
+function Propo() {
   return (
-     <>
-      {/* Vos autres composants */}
-      <NosExpertisesCompact />
-      {/* Suite de votre page */}
-
-       <AdvancedWaveSeparator 
+    <div>
+        
+        <AProposDeNous />
+         <AdvancedWaveSeparator 
                 variant="liquid"
                 direction="up"
                 colors={{ secondary: '#964cb2' }}
                 animated={true}
               />
          <Footer />
-    </>
+    </div>
   )
 }
 
-export default CommentCaMarche
+export default Propo
