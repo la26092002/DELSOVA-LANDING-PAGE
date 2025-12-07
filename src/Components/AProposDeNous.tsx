@@ -2,72 +2,62 @@ import React from "react";
 import {
   Users,
   MapPin,
-  Code,
-  Smartphone,
-  Globe,
-  Heart,
   Building,
   Flag,
   Mail,
   Phone,
   Calendar,
   Award,
-  Target,
+  Globe,
+  Briefcase,
 } from "lucide-react";
 
-// Données des fondateurs
-const fondateurs = [
+// Données de l'équipe mise à jour
+const equipe = [
   {
     id: 1,
     prenom: "Maalem",
-    nom: "Nouredinne",
-    role: "Lead Développeur & CTO",
-    expertise: "Full-Stack & Intelligence Artificielle",
+    nom: "Nouredine",
+    role: "Leader & Directeur",
+    expertise: "Leadership & Management",
     description:
-      "Expert en développement full-stack avec 8 ans d'expérience. Spécialisé dans les architectures cloud, l'IA et les applications évolutives.",
+      "Ancien Directeur du site industriel – Oran/Arzew, Sonatrach. Plus de 60 ans d'expérience en leadership et management stratégique.",
     initiales: "MN",
     couleur: "from-blue-500 to-cyan-500",
-    competences: ["React/Next.js", "Node.js", "Python/AI", "Cloud AWS/Azure"],
+    competences: ["Leadership Stratégique", "Management Industriel", "Vision d'Entreprise", "Excellence Opérationnelle"],
   },
   {
     id: 2,
     prenom: "Chrair",
-    nom: "Nadir",
-    role: "Développeur Senior & Chef de Projet",
-    expertise: "Mobile & Applications Évolutives",
+    nom: "Mohammed Nadir",
+    role: "Ingénieur Informatique",
+    expertise: "Management & Innovation",
     description:
-      "Spécialiste des applications mobiles cross-platform et de la gestion de projets agiles. Passionné par l'UX/UI.",
+      "Ingénieur informatique avec plus de 6 ans d'expérience. Spécialisé dans la gestion de projets, le leadership d'équipe et la recherche de solutions innovantes.",
     initiales: "CN",
     couleur: "from-purple-500 to-pink-500",
-    competences: ["React Native", "Flutter", "UI/UX Design", "Gestion Agile"],
+    competences: ["Gestion de Projets", "Leadership d'Équipe", "Innovation & Recherche", "Stratégie Digitale"],
   },
   {
     id: 3,
     prenom: "Benyakhou",
     nom: "Elhadj Larbi",
-    role: "Développeur Backend & DevOps",
-    expertise: "Architecture Système & Infrastructure",
+    role: "Ingénieur Informatique",
+    expertise: "Gestion & Analyse",
     description:
-      "Expert en développement backend robuste et infrastructure DevOps. Garant de la sécurité et performance des applications.",
+      "Ingénieur informatique avec plus de 6 ans d'expérience. Expert en gestion de projets, analyse des besoins et coordination d'équipes techniques.",
     initiales: "BE",
     couleur: "from-emerald-500 to-green-500",
-    competences: ["Java/Spring", "Docker/K8s", "Bases de données", "Sécurité"],
+    competences: ["Gestion de Projets", "Analyse & Conseil", "Leadership d'Équipe", "Coordination Technique"],
   },
 ];
 
-// Données du siège social
+// Données du siège social simplifiées
 const siegeSocial = {
   ville: "Oran",
   pays: "Algérie",
-  adresse: "Plateau Ain El Turk",
   description:
     "Notre siège social est situé au cœur de la vibrante ville d'Oran, capitale économique de l'Ouest algérien.",
-  caracteristiques: [
-    "Bureau moderne avec vue sur la Méditerranée",
-    "Équipements technologiques de pointe",
-    "Espace de collaboration innovant",
-    "Accès facile depuis le centre-ville",
-  ],
 };
 
 function AProposDeNous() {
@@ -84,32 +74,30 @@ function AProposDeNous() {
           </h1>
         </div>
         <p className="text-[#4186d8] text-lg sm:text-xl lg:text-2xl font-medium mb-3">
-          Trois Développeurs Passionnés, Une Vision Commune
+          Leadership Expérimenté & Expertise Technique
         </p>
         <p className="text-gray-600 text-base sm:text-lg max-w-4xl mx-auto px-4">
-          Fondée par trois développeurs experts, Delsova Technologies incarne
-          l'excellence technique et l'innovation au service de la transformation
-          digitale des entreprises.
+          Delsova Technologies combine une vision stratégique forte avec une expertise technique de pointe pour offrir des solutions digitales innovantes.
         </p>
       </div>
 
       {/* Section principale avec deux colonnes */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
-        {/* Colonne gauche : Nos fondateurs */}
+        {/* Colonne gauche : Notre équipe */}
         <div>
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#4186d8] to-[#964cb2] flex items-center justify-center">
-              <Code className="w-5 h-5 text-white" />
+              <Briefcase className="w-5 h-5 text-white" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0e1934]">
-              Nos Fondateurs & Développeurs
+              Nos Fondateurs
             </h2>
           </div>
 
           <div className="space-y-6">
-            {fondateurs.map((fondateur) => (
+            {equipe.map((membre) => (
               <div
-                key={fondateur.id}
+                key={membre.id}
                 className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start gap-4">
@@ -118,11 +106,11 @@ function AProposDeNous() {
                     <div
                       className={`
                       w-16 h-16 rounded-xl flex items-center justify-center
-                      bg-gradient-to-br ${fondateur.couleur} shadow-md
+                      bg-gradient-to-br ${membre.couleur} shadow-md
                     `}
                     >
                       <span className="text-white text-xl font-bold">
-                        {fondateur.initiales}
+                        {membre.initiales}
                       </span>
                     </div>
                   </div>
@@ -130,25 +118,25 @@ function AProposDeNous() {
                   {/* Informations */}
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-gray-800 mb-1">
-                      {fondateur.prenom}{" "}
-                      <span className="text-[#4186d8]">{fondateur.nom}</span>
+                      {membre.prenom}{" "}
+                      <span className="text-[#4186d8]">{membre.nom}</span>
                     </h3>
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <span className="text-gray-600 font-medium">
-                        {fondateur.role}
+                        {membre.role}
                       </span>
                       <span className="text-xs text-[#964cb2] font-medium px-2 py-1 bg-[#964cb2]/10 rounded-full">
-                        {fondateur.expertise}
+                        {membre.expertise}
                       </span>
                     </div>
 
                     <p className="text-gray-600 text-sm mb-4">
-                      {fondateur.description}
+                      {membre.description}
                     </p>
 
                     {/* Compétences */}
                     <div className="flex flex-wrap gap-2">
-                      {fondateur.competences.map((competence, index) => (
+                      {membre.competences.map((competence, index) => (
                         <span
                           key={index}
                           className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full"
@@ -193,11 +181,8 @@ function AProposDeNous() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-cyan-400 mt-1" />
                   <div>
-                    <div className="font-medium">
+                    <div className="font-medium text-lg">
                       {siegeSocial.ville}, {siegeSocial.pays}
-                    </div>
-                    <div className="text-sm text-blue-100">
-                      {siegeSocial.adresse}
                     </div>
                   </div>
                 </div>
@@ -205,21 +190,6 @@ function AProposDeNous() {
                 <p className="text-blue-100 text-sm">
                   {siegeSocial.description}
                 </p>
-              </div>
-
-              {/* Caractéristiques */}
-              <div className="mt-6 pt-6 border-t border-white/20">
-                <h4 className="font-bold mb-3 text-blue-200">
-                  Caractéristiques du siège :
-                </h4>
-                <ul className="space-y-2">
-                  {siegeSocial.caracteristiques.map((caract, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2"></div>
-                      <span className="text-sm text-blue-100">{caract}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
 
@@ -280,13 +250,13 @@ function AProposDeNous() {
               <div className="flex items-center gap-2 text-gray-600 mb-2">
                 <Calendar className="w-4 h-4" />
                 <span className="font-medium">Année de création :</span>
-                <span className="text-[#4186d8] font-bold">2020</span>
+                <span className="text-[#4186d8] font-bold">2026</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <Award className="w-4 h-4" />
                 <span className="font-medium">Spécialisation :</span>
                 <span className="text-[#964cb2] font-bold">
-                  Solutions Digitales B2B
+                  Solutions Digitales B2B (business to business)
                 </span>
               </div>
             </div>

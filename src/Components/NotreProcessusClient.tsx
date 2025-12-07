@@ -5,9 +5,6 @@ import {
   ClipboardCheck,
   Target,
   Lightbulb,
-  CheckCircle,
-  Shield,
-  TrendingUp,
   ChevronLeft,
   ChevronRight,
   ArrowRight,
@@ -19,7 +16,7 @@ const processSteps = [
     number: "01",
     title: "ANALYSE DE SITUATION",
     description:
-      "Compréhension complète de votre contexte, ressources existantes et infrastructure.",
+      "Compréhension complète de votre contexte, objectifs et contraintes.",
     icon: Search,
     color: "from-blue-500 to-cyan-400",
     shortDesc: "Analyse initiale",
@@ -29,7 +26,7 @@ const processSteps = [
     number: "02",
     title: "ÉTAT DES LIEUX",
     description:
-      "Audit détaillé des processus actuels, systèmes en place et points d'amélioration identifiés.",
+      "Audit des processus existants, systèmes utilisés et performances actuelles.",
     icon: FileText,
     color: "from-cyan-500 to-teal-400",
     shortDesc: "Audit complet",
@@ -39,7 +36,7 @@ const processSteps = [
     number: "03",
     title: "DIAGNOSTIC",
     description:
-      "Évaluation des forces/faiblesses, identification des goulots d'étranglement et blocages opérationnels.",
+      "Identification des forces, faiblesses et obstacles opérationnels.",
     icon: ClipboardCheck,
     color: "from-teal-500 to-emerald-400",
     shortDesc: "Diagnostic approfondi",
@@ -47,9 +44,9 @@ const processSteps = [
   {
     id: 4,
     number: "04",
-    title: "ANALYSE DE PROBLÈME",
+    title: "ANALYSE DU PROBLÈME",
     description:
-      "Définition précise des enjeux prioritaires et impact sur votre activité.",
+      "Définition claire des priorités et des enjeux qui impactent votre activité.",
     icon: Target,
     color: "from-emerald-500 to-green-400",
     shortDesc: "Identification des enjeux",
@@ -57,9 +54,9 @@ const processSteps = [
   {
     id: 5,
     number: "05",
-    title: "PROPOSITION DE SOLUTION",
+    title: "PROPOSITION DE REMÈDE",
     description:
-      "Recommandations adaptées avec roadmap d'implémentation et ROI estimé.",
+      "Recommandations adaptées avec roadmap, actions priorisées et ROI estimé.",
     icon: Lightbulb,
     color: "from-green-500 to-lime-400",
     shortDesc: "Solution personnalisée",
@@ -76,9 +73,12 @@ function NotreProcessusClient() {
         <h1 className="text-[#0e1934] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4">
           NOTRE PROCESSUS CLIENT
         </h1>
-        <p className="text-[#4186d8] text-sm sm:text-base lg:text-lg xl:text-xl max-w-4xl mx-auto px-4">
+        <p className="text-[#4186d8] text-sm sm:text-base lg:text-lg xl:text-xl max-w-4xl mx-auto px-4 mb-2">
           Une méthodologie structurée pour garantir le succès de votre
           transformation digitale
+        </p>
+        <p className="text-gray-600 text-sm lg:text-base max-w-3xl mx-auto px-4">
+          <span className="font-semibold text-[#0e1934]">Engagement Delsova :</span> Des solutions spécifiques et adaptées, conçues pour garantir la performance et le succès durable de votre entreprise.
         </p>
       </div>
 
@@ -152,7 +152,7 @@ function NotreProcessusClient() {
                                 isActive ? "text-[#4186d8]" : "text-gray-500"
                               }`}
                             >
-                              {step.number}
+                              ÉTAPE {step.number}
                             </span>
                           </div>
                         </div>

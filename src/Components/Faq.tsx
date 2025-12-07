@@ -10,12 +10,12 @@ const faqData = [
       "DELSOVA offre une gamme complète de services : Intelligence Artificielle (IA), Digitalisation Entreprises (ERP/CRM), Smart Software sur mesure, et Web & Mobile. Nous transformons vos processus métier avec des solutions innovantes et performantes.",
   },
   {
-    id: 2,
-    category: "Services",
-    question: "Pouvez-vous personnaliser les solutions selon mes besoins ?",
-    answer:
-      "Absolument ! Nous créons des solutions sur mesure adaptées à votre contexte spécifique. Notre processus client inclut une analyse approfondie de vos besoins avant de proposer une solution optimale.",
-  },
+  id: 2,
+  category: "Services",
+  question: "Pouvez-vous personnaliser les solutions selon mes besoins ?",
+  answer:
+    "Absolument ! Nous créons des solutions spécifiques et adaptées à votre contexte. Notre processus client en 5 étapes garantit une compréhension complète de vos besoins avant de proposer des remèdes optimaux."
+},
   {
     id: 3,
     category: "Processus",

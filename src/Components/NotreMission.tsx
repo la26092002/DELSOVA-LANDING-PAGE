@@ -11,7 +11,7 @@ function NotreMission() {
             Notre Mission & Vision
           </h2>
           <p className="text-blue-100 text-lg max-w-4xl mx-auto">
-            Trois développeurs, une ambition : révolutionner l'expérience
+            Des développeurs, une ambition : révolutionner l'expérience
             digitale des entreprises
           </p>
         </div>
