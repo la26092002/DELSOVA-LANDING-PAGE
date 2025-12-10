@@ -1,21 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Clock,
-  UserCheck,
-  Mail,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Music2,
-  Phone,
-  Code,
-  Brain,
-  Smartphone,
-} from "lucide-react";
+import { Sparkles, TrendingUp, Zap } from "lucide-react";
 
-// Presentation Component
 function Presentation() {
   return (
     <section className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 lg:py-16 bg-[#f9fcf8] gap-8 lg:gap-12">
@@ -24,19 +10,33 @@ function Presentation() {
         {/* Text Section */}
         <div className="space-y-4">
           <h1 className="text-[#0e1934] text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            Solutions Digitales
+            Delsova Technologies
             <span className="block bg-gradient-to-r from-[#4186d8] to-[#964cb2] bg-clip-text text-transparent">
-              Innovantes
+              Innovation – IA – Digitalisation
             </span>
           </h1>
-          <h2 className="text-[#4186d8] text-xl lg:text-3xl xl:text-4xl font-normal">
-            Web, Mobile & Intelligence Artificielle
+          <h2 className="text-[#4186d8] text-xl lg:text-2xl xl:text-3xl font-semibold">
+            Nous accompagnons la transformation des entreprises
           </h2>
           <p className="text-[#0e1934] text-base lg:text-lg xl:text-xl font-normal leading-7 lg:leading-8 max-w-full lg:max-w-[668px] mt-2">
-            Delsova développe des solutions technologiques avancées incluant
-            applications web et mobiles, modèles d'IA en vision par ordinateur
-            et IA générative pour transformer vos idées en réalité digitale.
+            Nous sommes des bâtisseurs. Nous sommes des visionnaires. Nous créons des solutions qui font avancer votre entreprise au moyen d'outils numériques et digitaux performants.
           </p>
+        </div>
+
+        {/* Features Pills */}
+        <div className="flex flex-wrap gap-3">
+          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
+            <Sparkles className="w-4 h-4 text-[#4186d8]" />
+            <span className="text-sm font-medium text-gray-700">Innovation</span>
+          </div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
+            <Zap className="w-4 h-4 text-[#964cb2]" />
+            <span className="text-sm font-medium text-gray-700">Performance</span>
+          </div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
+            <TrendingUp className="w-4 h-4 text-emerald-600" />
+            <span className="text-sm font-medium text-gray-700">Succès Durable</span>
+          </div>
         </div>
 
         {/* Buttons Section */}
@@ -69,35 +69,12 @@ function Presentation() {
 
       {/* === RIGHT SIDE === */}
       <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-        <div className="relative w-full max-w-md lg:max-w-[550px] h-64 lg:h-80 bg-gradient-to-br from-[#4186d8] to-[#964cb2] rounded-2xl lg:rounded-[30px] shadow-2xl overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-4 p-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
-                <Code className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">
-                  Développement Web
-                </span>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
-                <Smartphone className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">
-                  Applications Mobiles
-                </span>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
-                <Brain className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">
-                  IA Générative
-                </span>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex flex-col items-center">
-                <CheckCircle className="text-white w-8 h-8 mb-2" />
-                <span className="text-white text-sm text-center">
-                  Vision par Ordinateur
-                </span>
-              </div>
-            </div>
-          </div>
+        <div className="relative w-full max-w-md lg:max-w-[550px] h-full lg:h-full rounded-2xl lg:rounded-[30px] shadow-2xl overflow-hidden">
+          <img
+            src="/assets/home.png"
+            alt="Delsova Technologies - Innovation, IA et Digitalisation"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
