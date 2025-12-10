@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
 import logo from "../assets/delsova-1.png";
+import BookingModal from "../Screens/BookingSystem";
 
 // Nav Component
 function Nav() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
   return (
     <nav className="flex items-center justify-between w-full bg-[#f9fcf8] px-4 lg:px-8 py-4 shadow-sm border-b-2 border-b-purple-500">
       {/* === DESKTOP LAYOUT (lg and up) === */}
@@ -62,7 +65,10 @@ function Nav() {
 
         {/* Book a Meeting Button (25%) */}
         <div className="w-[25%] flex justify-end">
-          <button className="px-9 py-5 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap cursor-pointer">
+          <button
+            onClick={() => setIsBookingOpen(true)}
+            className="px-9 py-5 bg-gradient-to-r from-[#0e1934] to-[#4186d8] text-white text-base font-bold rounded-lg hover:shadow-lg transition-shadow duration-200 flex items-center gap-3 whitespace-nowrap cursor-pointer"
+          >
             <svg
               className="w-5 h-5"
               fill="none"
@@ -133,6 +139,10 @@ function Nav() {
           </button>
         </div>
       </div>
+      <BookingModal
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+      />
     </nav>
   );
 }

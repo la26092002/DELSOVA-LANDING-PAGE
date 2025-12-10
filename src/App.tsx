@@ -5,6 +5,7 @@ import CommentCaMarche from "./Screens/CommentCaMarche";
 import Nav from "./Components/Nav";
 import Propo from "./Screens/Propo";
 import Footer from "./Components/Footer";
+import BookingSystem from "./Screens/BookingSystem";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/apropos" element={<Propo />} />
 
         <Route path="/services" element={<CommentCaMarche />} />
+        <Route path="/booking" element={<BookingSystem />} />
       </Routes>
       <Footer />
     </Router>
