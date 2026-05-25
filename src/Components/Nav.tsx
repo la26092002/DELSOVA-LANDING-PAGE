@@ -26,7 +26,7 @@ function Nav() {
             Services
           </Link>
           <Link
-            to="/services"
+            to="/products"
             className="font-bold text-[#4186d8] hover:text-[#2d5fa8]"
           >
             New Solutions
