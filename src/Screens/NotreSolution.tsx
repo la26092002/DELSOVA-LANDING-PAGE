@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { Sparkles, Phone } from "lucide-react";
 import products from "../data/products.json";
 
+const STORYLANE_URL = "https://demo.storylane.com/share/s2odquzstlcg";
+
 const NotreSolution: React.FC = () => {
   const { id } = useParams();
 
@@ -19,6 +21,8 @@ const NotreSolution: React.FC = () => {
       </div>
     );
   }
+
+  const isPilotImport = id === "pilot-import";
 
   return (
     <section className="w-full bg-gradient-to-b from-[#f9fcf8] to-white py-16 lg:py-20 px-4 sm:px-6 lg:px-16">
@@ -95,6 +99,71 @@ const NotreSolution: React.FC = () => {
           </div>
         </div>
 
+        {/* ===== STORYLANE INTERACTIVE DEMO (Pilot Import only) ===== */}
+        {isPilotImport && (
+          <div className="mt-0 mb-20">
+            {/* Section header */}
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4186d8]/10 to-[#964cb2]/10 text-[#4186d8] text-sm font-semibold mb-4">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Démo Interactive
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#0e1934]">
+                Découvrez Pilot Import en action
+              </h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-[#4186d8] to-[#964cb2] mx-auto mt-3 mb-4"></div>
+              <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+                Explorez notre système interactivement — sans inscription ni installation.
+              </p>
+            </div>
+
+            {/* Storylane embed card */}
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+              {/* card top bar — mimics a browser chrome, stays on-brand */}
+              <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#0e1934] to-[#4186d8]">
+                <div className="flex gap-1.5">
+                  <span className="w-3 h-3 rounded-full bg-white/30"></span>
+                  <span className="w-3 h-3 rounded-full bg-white/30"></span>
+                  <span className="w-3 h-3 rounded-full bg-white/30"></span>
+                </div>
+                <span className="text-white/80 text-xs font-medium tracking-wide ml-2">
+                  pilot-import.delsova.com — Démo interactive
+                </span>
+              </div>
+
+              {/* iframe — fixed height so it renders fully on all screen sizes */}
+              <div className="w-full" style={{ height: "600px" }}>
+                <iframe
+                  src={STORYLANE_URL}
+                  title="Pilot Import – Démo interactive Storylane"
+                  allow="fullscreen"
+                  style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+                />
+              </div>
+
+              {/* card footer */}
+              <div className="px-6 py-3 bg-[#f9fcf8] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                <p className="text-xs text-gray-400">
+                  Propulsé par Storylane · Delsova Technologies
+                </p>
+                <a
+                  href={STORYLANE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-[#4186d8] hover:underline flex items-center gap-1"
+                >
+                  Ouvrir en plein écran
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* ===== FEATURES SECTION ===== */}
         <div className="mt-20">
           <div className="text-center mb-12">
@@ -149,7 +218,7 @@ const NotreSolution: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Banner - Informational only, no button */}
+        {/* Bottom Banner */}
         <div className="mt-20 bg-gradient-to-r from-[#4186d8] to-[#964cb2] rounded-2xl p-8 lg:p-12 text-center text-white shadow-xl">
           <h3 className="text-2xl lg:text-3xl font-bold">
             Prêt à transformer votre activité ?
