@@ -1,0 +1,85 @@
+[
+    {
+        "id": "pilot-import",
+        "name": "Pilot Import",
+        "tagline": "Gestion intelligente des importations",
+        "description": "Plateforme SaaS moderne pour digitaliser et centraliser la gestion complète des opérations d'importation. Pilot Import permet aux entreprises de suivre chaque étape du processus, depuis la commande fournisseur jusqu'à la facturation client, tout en assurant une gestion précise des coûts, des stocks et des documents administratifs.",
+        "longDescription": "Le système offre une gestion avancée des importations avec le suivi des fournisseurs, des pays d'origine, des coûts de transport, de dédouanement et de magasinage, ainsi que le calcul automatique du coût de revient des produits. Il permet également une traçabilité détaillée des produits et des lots afin de garantir un contrôle optimal des marchandises importées. Pilot Import intègre des modules de gestion de stock multi-dépôts, de facturation et de paiements, ainsi qu'un espace documentaire permettant de centraliser tous les justificatifs liés aux opérations d'importation. Grâce à son tableau de bord analytique, les utilisateurs peuvent visualiser en temps réel les performances commerciales, les marges, les impayés et les statistiques clés de l'entreprise.",
+        "image": "/assets/PilotImport_Cover.jpg",
+        "features": [
+            {
+                "id": "ops",
+                "title": "Gestion complète des opérations",
+                "description": "Suivi des fournisseurs, pays d'origine, coûts de transport, dédouanement et magasinage. Calcul automatique du coût de revient.",
+                "icon": "🚢"
+            },
+            {
+                "id": "trace",
+                "title": "Traçabilité produits & lots",
+                "description": "Gestion par lots avec historique complet des mouvements, origine et conformité des marchandises importées.",
+                "icon": "📦"
+            },
+            {
+                "id": "multi-stock",
+                "title": "Gestion de stock multi-dépôts",
+                "description": "Suivi des stocks en temps réel sur plusieurs sites, alertes de réapprovisionnement et inventaire centralisé.",
+                "icon": "🏪"
+            },
+            {
+                "id": "billing",
+                "title": "Facturation & paiements",
+                "description": "Création automatique des factures clients, suivi des échéances, relances intégrées et gestion des impayés.",
+                "icon": "🧾"
+            },
+            {
+                "id": "documents",
+                "title": "Espace documentaire centralisé",
+                "description": "Stockage sécurisé de tous les justificatifs : factures fournisseurs, connaissements, déclarations en douane, certificats d'origine.",
+                "icon": "📁"
+            },
+            {
+                "id": "dashboard",
+                "title": "Tableau de bord analytique",
+                "description": "Indicateurs en temps réel sur les marges, performances commerciales, impayés et statistiques clés de l'entreprise.",
+                "icon": "📊"
+            }
+        ],
+        "advantages": [
+            {
+                "title": "Sécurisé",
+                "description": "Chiffrement des données, sauvegarde automatique et conformité RGPD",
+                "icon": "🔒"
+            },
+            {
+                "title": "100% Cloud",
+                "description": "Accès 24/7 depuis n'importe quel appareil connecté, aucune infrastructure à installer",
+                "icon": "☁️"
+            },
+            {
+                "title": "Évolutif",
+                "description": "Architecture scalable qui s'adapte à la croissance de votre activité",
+                "icon": "📈"
+            },
+            {
+                "title": "Sans maintenance",
+                "description": "Mises à jour automatiques et support technique inclus",
+                "icon": "🛠️"
+            },
+            {
+                "title": "Interopérable",
+                "description": "API ouvertes pour connecter Pilot Import à vos autres outils (ERP, CRM, comptabilité)",
+                "icon": "🔌"
+            },
+            {
+                "title": "Personnalisable",
+                "description": "Workflows et champs adaptables à vos processus métier spécifiques",
+                "icon": "⚙️"
+            }
+        ],
+        "stats": {
+            "uptime": "99.9%",
+            "clients": "+120 entreprises",
+            "transactions": "1M+"
+        }
+    }
+]

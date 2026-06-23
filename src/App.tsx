@@ -1,11 +1,13 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Accueil from "./Screens/Accueil";
-import CommentCaMarche from "./Screens/CommentCaMarche";
-import Nav from "./Components/Nav";
-import Propo from "./Screens/Propo";
-import Footer from "./Components/Footer";
-import BookingSystem from "./Screens/BookingSystem";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Accueil from "./Screens/Accueil.tsx";
+import CommentCaMarche from "./Screens/CommentCaMarche.tsx";
+import Nav from "./Components/Nav.tsx";
+import Propo from "./Screens/Propo.tsx";
+import Footer from "./Components/Footer.tsx";
+import BookingPage from "./Screens/BookingPage.tsx";
+import NotreSolution from "./Screens/NotreSolution.tsx";
+import Products from "./Screens/Products.tsx";
 
 function App() {
   return (
@@ -15,9 +17,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/apropos" element={<Propo />} />
-
         <Route path="/services" element={<CommentCaMarche />} />
-        <Route path="/booking" element={<BookingSystem />} />
+        <Route path="/booking" element={<BookingPage />} />
+
+
+         <Route path="/products" element={<Products />} />
+        <Route path="/solution/:id" element={<NotreSolution />} />
       </Routes>
       <Footer />
     </Router>

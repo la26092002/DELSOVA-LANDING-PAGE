@@ -1,7 +1,4 @@
-import React from "react";
-import AProposDeNous from "../Components/AProposDeNous";
-import Footer from "../Components/Footer";
-import { AdvancedWaveSeparator } from "../Components/WaveVariants";
+import AProposDeNous from "../Components/AProposDeNous.tsx";
 
 function Propo() {
   return (
